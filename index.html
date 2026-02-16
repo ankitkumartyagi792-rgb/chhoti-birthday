@@ -296,6 +296,19 @@
             line-height: 1.6;
         }
 
+        .wish-big {
+            font-size: clamp(1.3rem, 5vw, 1.8rem) !important;
+            font-weight: 600;
+            color: #d63384 !important;
+            animation: bounce 1s ease infinite;
+        }
+
+        .wish-small {
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+            color: #ff69b4 !important;
+            margin-top: 15px !important;
+        }
+
         .wish-emoji {
             font-size: 4rem;
             animation: bounce 0.5s ease infinite;
@@ -571,11 +584,12 @@
     <div class="wish-popup" id="wish-popup">
         <div class="wish-content">
             <div class="wish-emoji">🎂🎉🎀</div>
-            <h2>Happy Birthday Chhoti! 💕</h2>
-            <p>Meri pyaari chhoti sister</p>
-            <p>Teri har wish poori ho!</p>
+            <h2>🎂 Happy Birthday Chhoti! 🎂</h2>
+            <p class="wish-big">🎀 Meri Pyaari Chhoti 🎀</p>
+            <p>Teri har wish poori ho! 🌟</p>
             <p>Bhai hamesha tere saath hai! 💖</p>
-            <button class="btn" onclick="closeWish()">🎵 Song Suno 🎵</button>
+            <p class="wish-small">God bless you meri jaan! 💕</p>
+            <button class="btn" onclick="closeWish()">🎵 Birthday Song Suno 🎵</button>
         </div>
     </div>
 
