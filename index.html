@@ -877,39 +877,39 @@ Janamdin mubarak meri pyaari chhoti! 💕</div>
             container.innerHTML = words.map((w, i) => `<span id="word-${i}">${w}</span>`).join(' ');
         }
 
-        // Full birthday melody - longer version
+        // Full birthday melody - normal speed version
         function playMelody() {
             if (!audioCtx) {
                 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             }
 
-            // Extended happy birthday melody
+            // Happy Birthday melody - normal tempo (BPM ~100)
             const melody = [
-                // First phrase
-                { freq: 262, dur: 0.25 }, { freq: 262, dur: 0.25 },
-                { freq: 294, dur: 0.5 }, { freq: 262, dur: 0.5 },
-                { freq: 349, dur: 0.5 }, { freq: 330, dur: 1 },
-                // Second phrase
-                { freq: 262, dur: 0.25 }, { freq: 262, dur: 0.25 },
-                { freq: 294, dur: 0.5 }, { freq: 262, dur: 0.5 },
-                { freq: 392, dur: 0.5 }, { freq: 349, dur: 1 },
-                // Third phrase
-                { freq: 262, dur: 0.25 }, { freq: 262, dur: 0.25 },
-                { freq: 523, dur: 0.5 }, { freq: 440, dur: 0.5 },
-                { freq: 349, dur: 0.5 }, { freq: 330, dur: 0.5 },
-                { freq: 294, dur: 1 },
-                // Fourth phrase
-                { freq: 466, dur: 0.25 }, { freq: 466, dur: 0.25 },
-                { freq: 440, dur: 0.5 }, { freq: 349, dur: 0.5 },
-                { freq: 392, dur: 0.5 }, { freq: 349, dur: 1 },
-                // Repeat first phrase
-                { freq: 262, dur: 0.25 }, { freq: 262, dur: 0.25 },
-                { freq: 294, dur: 0.5 }, { freq: 262, dur: 0.5 },
-                { freq: 349, dur: 0.5 }, { freq: 330, dur: 1 },
-                // Ending
-                { freq: 330, dur: 0.5 }, { freq: 349, dur: 0.5 },
-                { freq: 392, dur: 0.5 }, { freq: 440, dur: 0.5 },
-                { freq: 349, dur: 1.5 }
+                // First phrase - "Happy birthday to you"
+                { freq: 262, dur: 0.4 }, { freq: 262, dur: 0.4 },
+                { freq: 294, dur: 0.8 }, { freq: 262, dur: 0.8 },
+                { freq: 349, dur: 0.8 }, { freq: 330, dur: 1.6 },
+                // Second phrase - "Happy birthday to you"
+                { freq: 262, dur: 0.4 }, { freq: 262, dur: 0.4 },
+                { freq: 294, dur: 0.8 }, { freq: 262, dur: 0.8 },
+                { freq: 392, dur: 0.8 }, { freq: 349, dur: 1.6 },
+                // Third phrase - "Happy birthday dear chhoti"
+                { freq: 262, dur: 0.4 }, { freq: 262, dur: 0.4 },
+                { freq: 523, dur: 0.8 }, { freq: 440, dur: 0.8 },
+                { freq: 349, dur: 0.8 }, { freq: 330, dur: 0.8 },
+                { freq: 294, dur: 1.6 },
+                // Fourth phrase - "Happy birthday to you"
+                { freq: 466, dur: 0.4 }, { freq: 466, dur: 0.4 },
+                { freq: 440, dur: 0.8 }, { freq: 349, dur: 0.8 },
+                { freq: 392, dur: 0.8 }, { freq: 349, dur: 1.6 },
+                // Repeat - "Happy birthday to you"
+                { freq: 262, dur: 0.4 }, { freq: 262, dur: 0.4 },
+                { freq: 294, dur: 0.8 }, { freq: 262, dur: 0.8 },
+                { freq: 349, dur: 0.8 }, { freq: 330, dur: 1.6 },
+                // Ending notes
+                { freq: 330, dur: 0.8 }, { freq: 349, dur: 0.8 },
+                { freq: 392, dur: 0.8 }, { freq: 440, dur: 0.8 },
+                { freq: 349, dur: 2.0 }
             ];
 
             let time = audioCtx.currentTime;
