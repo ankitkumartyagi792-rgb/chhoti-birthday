@@ -715,22 +715,23 @@ Janamdin mubarak meri pyaari chhoti! 💕</div>
             
             if (pageId === 'celebration-page') {
                 initLyrics();
-                // Show wish popup first
+                // Show wish popup FIRST before anything else
                 setTimeout(() => {
                     document.getElementById('wish-popup').classList.add('show');
                     createHearts();
-                }, 500);
+                    createConfetti();
+                }, 300);
             }
         }
 
         function closeWish() {
             document.getElementById('wish-popup').classList.remove('show');
-            // Auto play song after wish closes
+            // Wait a bit then auto play song
             setTimeout(() => {
                 if (!isPlaying) {
                     toggleSong();
                 }
-            }, 500);
+            }, 800);
         }
 
         // Auto navigate from loading
